@@ -1,21 +1,488 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!-- cái này ám chỉ html5-->
 <html lang="en">
-<head>
+
+<head><!--2 thành phần chính là head và body-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Những tag đã học</title>
+    <title>Những tag đã học</title><!--cái này hiển thị tên 
+                                    ở trên thanh các trang-->
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+
+        #abc {
+            color: red;
+        }
+    </style>
+    <link rel="stylesheet" href="styleCSS.css">
 </head>
-<body>
+
+<body><!-- toàn bộ nội dung hiển thị 
+    trong web nằm ở body-->
     <main>
-        <h1>Những tag HTML đã học được:</h1>
-        <p>1) các tag cơ</p>
-        <ol>
-            <li>&lt;DOCTYPE html&gt;: Thư hiện html</li>
-            <li>&lt;html lang="en"&gt;: Quy đỉnh kiểu khi khai báo link, image</li>
-            <li>&lt;Head&gt;: Phần đầu của page</li>
-            <li>&lt;Body&gt;: Phần thân của page<br>&rarr; Head và Body có mở đầu và kết thúc, nếu có dấu / ở trước tên thì đó là end tag</li>
+        <h1>Những kiến thức HTML đã học được:</h1>
+        <ol type="A">
+            <li>Các tag cơ bản</li>
+            <ul>
+                <li>Tất cả các phần tử html (html element) đều có thẻ mở và thẻ đóng
+                    <br> ngoại trừ 1 số thẻ đặc biệt
+                    <br>VD: &lt;tagname&gt;Contents&lt;/tagname&gt;
+                </li>
+                <ol type="I">
+                    <li>Các tag có mở và đóng</li>
+                    <ol type="1">
+                        <li>&lt;html lang="en"&gt;: Quy đỉnh loại ngôn ngữ dùng trong trang web </li>
+                        <li>&lt;Head&gt;: Phần đầu của page</li>
+                        <li>&lt;Body&gt;: Phần thân của page
+                            <br>&rarr; Head và Body có mở đầu và kết thúc, nếu có dấu / ở trước tên thì đó là end tag
+                        </li>
+                        <li>&lt;h1&gt; là phần tiêu đề,
+                            <br>mặc định in đậm và nhỏ dần từ h1 đến h6
+                        </li>
+                        <li>&lt;p&gt; là đoạn văn</li>
+                        <li>&lt;b&gt;; &lt;strong&gt;: dùng để in đậm<b> những kí tự nằm trong tag</b>
+                            <br>&lt;i&gt;: dùng để <i>in nghiêng</i> &lt;em&gt;: <em>ít nghiêng hơn</em>
+                        </li>
+                        <li>&lt;u&gt;; &lt;ins&gt;: dùng để <u>gạch chân</u></li>
+                        <li>&lt;del&gt;: để <del>gạch ngang chữ</del></li>
+                        <li>&lt;sub&gt;: dủng để <sup>viết lên trên</sup></li>
+                        <li>&lt;sub&gt;: dùng để <sub>viết xuống dưới</sub></li>
+                        <li>Còn có tag list và table sẽ được nhắc tới ở phần C</li>
+                        <br>
+                    </ol>
+                    <li>Các tag không cần đóng</li>
+                    <ol type="1">
+                        <li>&lt;DOCTYPE html&gt;: Thư viện html</li>
+                        <li>&lt;br&gt;: dùng để xuống dòng</li>
+                        <li>&lt;hr&gt; dùng để kẻ ngang trang web
+                            <br>VD:
+                            <hr>
+                        </li>
+                    </ol>
+                    <li>Các tag cần thuộc tính</li>
+                    <ol type="1">
+                        <li>&lt;a href=" "&gt; là để gắn link vào
+                            <br> VD: google: <a href="https://www.google.com/?hl=vi">&lt;a
+                                href="https://www.google.com/?hl=vi"&gt;</a>
+                        </li>
+                        <li>&lt;img src=" "&gt;: để hiển thị ảnh (thẻ ko có thẻ đóng)
+                            <br> VD: Ảnh hình tròn:
+                            <br><img src="https://tomaudep.com/wp-content/uploads/2023/04/be-tap-to-mau-hinh-tron.jpg"
+                                alt="đây là hình tròn" width="200">
+                        </li>
+                    </ol>
+                </ol>
+            </ul>
+            <li>Các thuộc tính của thẻ</li>
+            <ul>
+                <li>Các thuộc tính sẽ nằm trong thẻ mở</li>
+                <ol type="1">
+                    <li><b>href:</b> thuộc tính đặc trưng của thẻ &lt;a&gt;</li>
+                    <li><b>scr, alt, width, height:</b> thuộc tính đặc trưng của thẻ &lt;img&gt;
+                        <br><b>alt:</b> nếu ảnh lỗi ko hiển thị đc thì sẽ hiển thị nội dung trong alt
+                        <br><b>width, height:</b> nằm sau link ảnh, dùng để chỉnh sửa kích thước hiển thị của ảnh,
+                        <br>nếu chỉ có 1 trong 2 thì cái còn lại sẽ tự động điều chỉnh theo hình gốc
+                        <br>còn nếu có cả 2 thì hình có thể khác với tỉ lệ ban đầu
+                    </li>
+                    <li><b>style:</b>: thuộc tính để chỉnh màu cho các tag hiển thị kí tự;
+                        <br><b>title</b>: thuộc tính để khi trỏ vào đoạn đấy sẽ hiển thị ra mô tả
+                        <br>VD: <p title="chắc chắn là màu đỏ nhé" style="color: red;">chữ màu đỏ</p>
+                    </li>
+                </ol>
+            </ul>
+            <li>Các tác list và table</li>
+            <ol type="I"">
+                <li>List: (&lt;li&gt;: các thành phần của list, nằm trong ul và ol)</li>
+                    <ol type=" 1">
+                <li>&lt;ul&gt;: list không đánh số. ul mặc định là chấm đen rồi đến chám trắng rồi đến vuông đen</li>
+                <ul style=" list-style-type: disc;">
+                    <li>&lt;ul style="list-style-type: disc;"&gt;</li>
+                </ul>
+                <ul style=" list-style-type: circle;">
+                    <li>&lt;ul style="list-style-type: circle;"&gt;</li>
+                </ul>
+                <ul style=" list-style-type: square;">
+                    <li>&lt;ul style="list-style-type: square;"&gt;</li>
+                </ul>
+                <ul style=" list-style-type: none;">
+                    <li>&lt;ul style="list-style-type: none;"&gt;</li>
+                </ul>
+                <li>&lt;ol&gt;: list có đánh số
+                    <br>Gồm 1 A a I i
+                </li>
+            </ol>
+            <li>
+                Table
+                <table border="1">
+                    <tr>
+                        <th>&lt;th&gt;</th>
+                        <th>là heading của bảng,
+                            <br>được in đậm, căn giữa
+                            <br>th là thay thế cho &lt;td&gt;
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>&lt;table&gt;</td>
+                        <td>để tạo bảng</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;table border="1"&gt;</td>
+                        <td>để tạo bảng có khung</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;tr&gt;</td>
+                        <td>là hàng</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;td&gt;</td>
+                        <td>là cột (trong hàng có cột)</td>
+                    </tr>
+                </table>
+                <br>
+                <p>&lt;table border="1" cellpadding="5" cellspacing="5"&gt;
+                    <br>cellpadding để khoảng cách của các ô rộng ra
+                    <br>cellspacing để tăng dãn cách giữa 2 border
+                </p>
+                <table border="1" cellpadding="5" cellspacing="5">
+                    <tr>
+                        <th>h1</th>
+                        <th>h2</th>
+                        <th>h3</th>
+                        <th>h4</th>
+                    </tr>
+                </table>
+                <p>Hiện h cellpadding cellspacing không còn dùng được ở html 5 nên phải dùng css</p>
+                <p>Thực hành vẽ bàn phím số</p>
+                <table border="1" cellpadding="25" cellspacing="5">
+                    <tr>
+                        <td>NUM<br>LOCK</td>
+                        <td>/</td>
+                        <td>*</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td rowspan="2">+</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td rowspan="2">ENTER</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">0</td>
+                        <td>.</td>
+                    </tr>
+                </table>
+                <p>rowspan để gộp hàng phía dưới
+                    <br> colspan để gộp cột bên cạnh
+                    <br>cả 2 đều là thuộc tính của &lt;td&gt;
+                </p>
+            </li>
+        </ol>
+        <li>Block và inline</li>
+        <ul style="list-style: disc;">
+            <li>Block-level element:</li>
+            <ul style="list-style: circle;">
+                <li>luôn bắt đầu tại 1 dòng mới</li>
+                <li>luôn chiếm toàn bộ chiều rộng có sẵn (có thể dùng div để giới hạn lại) </li>
+                <li>có margin top và bottom (là 2 cái khác màu trên dưới nếu xem ở F12)</li>
+            </ul>
+            <li>Inline element</li>
+            <ul style="list-style: circle;">
+                <li>không bắt đầu trên 1 dòng mới</li>
+                <li>Chỉ chiếm chiều rộng trong phạm vi đc xác định</li>
+            </ul>
+        </ul>
+        <li>div và span</li>
+        <div>đây là div: là block level</div>
+        <span>đây là span: là inline </span>
+        </ol>
+        <hr>
+        <h1>Những kiến thức CSS đã học được</h1>
+        <ol type="A">
+            <li>Cấu trúc cơ bản của 1 lệnh css:
+                <br>selector {declaration; declaration}
+                <br>trong đó:
+                <br>
+                <ul>
+                    <li>selector là tag</li>
+                    <li>declaration là các điều chỉnh dành cho tag đc chọn, trong declaration có property (thuộc tính)
+                        và value (giá trị của thuộc tính ấy)</li>
+                </ul>
+            </li>
+            <p>VD</p>
+            <p style="text-align:center"> &lt;p style="text-align:center"&gt;: để căn giữa</p>
+            <p>có thể định nghĩa style trên head để chỉnh tất cả style của tag đấy
+                <br>VD:
+                <br>&lt;style&gt;
+                <br> h1{ <br> text-algin: center; <br> }
+                <br> &lt;/style&gt;
+            </p>
+            <li>Một số lệnh css</li>
+            <ol type="1">
+                <li>color: chỉnh màu</li>
+                <li>text-align: chỉnh căn giữa, trái, phải....</li>
+                <li>font-size: chỉnh cỡ chữ</li>
+            </ol>
+            <br>
+            <li>Các cách để chọn tag cần chỉnh sửa</li>
+            <ol type="I">
+                <li>simple selector</li>
+                <ol type="1">
+                    <li>Chọn theo tag: (&lt;h1&gt;)</li>
+                    <li>Chọn theo id: id của các thẻ không được trùng nhau kể cả của 1 loại thẻ
+                        <br>Nghĩa là nếu muốn chỉnh 1 cái cụ thể thì có thể dùng id (id không nên bắt đầu bằng số,nếu
+                        không khi gọi phải là #\1; không bao gồm kí tự đặc biệt, dấu cách)
+                        <br>
+                        <p id="abc">VD: &lt;p id="1"&gt; thì trên head selector là #1</p>
+                    </li>
+                    <li>Chọn theo class: có thể trùng nhưng phải là các loại tag giống nhau, thay vì dùng # như id thì
+                        sẽ dùng .</li>
+                    <li>Combinator selector: kết hợp các cách selector
+                        <ul>
+                            <li><b>Descendant selector:</b> quan hệ cha con, cháu chắt...
+                                <br>sử dụng bằng dấu các (VD: .test h6 là chọn tất cả h6 nằm trong class test)
+                            </li>
+                            <li><b>Child selector: </b>.test > h6 : chọn những thẻ con trực tiếp của test</li>
+                            <li><b>Adjacent sibling selector: </b>.test + h6 : Chọn thẻ cùng cấp ngay sau selector </li>
+                            <li><b>General sibling selector: </b>.test ~ h6 : chọn tất cả các thẻ cùng cấp sau selector
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Pseudo-class selector</li>
+                    <li>Psuedo-element selector</li>
+                    <li>Attribute selector</li>
+                </ol>
+            </ol>
+            <li>Insert css vào trang web
+                <p>Có 3 cách chèn CSS
+                <ul style="list-style: circle;">
+                    <li>Inline CSS: có tác dụng ngay tại dòng đấy</li>
+                    <li>Internal CSS: css chỉ ảnh hưởng trong 1 trang web</li>
+                    <li>External CSS:
+                        <ul>
+                            <li>Tạo 1 file css riêng và ảnh hưởng đến nhiều file html khác</li>
+                            <li>Trong file css thì sẽ không tạo khung html</li>
+                            <li>Muốn áp dụng file css vào file html thì dùng thẻ link viết vào head
+                                <br>VD: &lt;link rel=" " href=" <i>link</i> "&gt;
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                </p>
+
+            </li>
+            <li>Các thuộc tính của CSS</li>
+            <ol type="1">
+                <li><b>color: </b>chỉnh màu
+                    <p>Có 3 kiểu color
+                    <ul>
+                        <li>RGB: rgb(255, 255, 255); rgba(0->255,255,255,1->0)</li>
+                        <li>HEX: #FFFFFF</li>
+                        <li>hsl: hsl(màu, độ hòa màu, độ sáng)</li>
+                    </ul>
+                    </p>
+                </li>
+                <li><b>backgroud</b>
+                    <ul>
+                        <li>backgroud-color: chỉnh màu của nền</li>
+                        <li>backgroud-image url(''): cài ảnh làm nền</li>
+                        <li>width, height: độ lớn của khung nền</li>
+                    </ul>
+                </li>
+                <br>
+                <li><b>border</b>
+                    <ul>
+                        <li>width: chiều rộng</li>
+                        <li>height: dài</li>
+                        <li>border-width: độ dày</li>
+                        <li>boder-style: kiểu</li>
+                        <li>boder-color: màu</li>
+                        <li>3 Cái trên có thể viết thành border: border-width, style, color</li>
+                        <li>border-radius: bộ bo viền</li>
+                    </ul>
+                </li>
+                <br>
+                <li><b>Margin: </b> khoảng cách từ border đến các phần từ khác bên ngoài, có thể âm để các thành phần
+                    nằm lên nhau
+                    <ul>
+                        <li>3 - 4 thuộc tính: marin: top, right, bottom, left</li>
+                        <li>2 thuộc tính: marin: top bottom, left right</li>
+                        <li>marin-top, marin-bottom...</li>
+                    </ul>
+                </li>
+                <br>
+                <li><b>Padding: </b> khoảng cách từ border đến các phần từ khác nằm trong nó, thao tác như marin</li>
+                <br>
+                <li><b>Text: </b> ngoài những cái phía trên còn có
+                    <ul>
+                        <li>text-align: căn giữa, trái, phải</li>
+                        <li>text-decoration: under/overline, line-through, none</li>
+                        <li>text-transform: lower/uppercase, capitalize</li>
+                        <li>text spacing
+                            <ul class="plus-list">
+                                <li>text-indent: thụt dòng đầu</li>
+                                <li>letter-spacing: khoảng cách các chữ</li>
+                                <li>word-spacing: khoảng cách các từ</li>
+                                <li>white-space: nowrap/wrap: ko xuống dòng/xuống dòng</li>
+                                <li>line-heoght: độ dãn dòng (normal,1.6,x%)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Fonts:</b> có 2 kiểu Serif và Sans-serif là gạch chân chữ có gạch và ko có gạch
+                    <br>cách dùng: font-family:
+                    </b>
+                </li>
+                <br>
+                <li><b>Icons: </b> phải import thư viện vào head rồi isert theo class của thư viện</li>
+                <br>
+                <li><b>Display: </b> inline, block, none (ẩn đi ẩn cả khoảng trống),
+                    visibility (visible/hiden) ẩn nhưng vẫn có khoảng trống, flex, grid</li>
+                <br>
+                <li><b>Max Width: </b>giống width nhưng set 1 giá trị max để khi thu nhở lại ở trên điện thoạt thì nó sẽ
+                    scale theo chứ ko phải lướt sang 2 bên</li>
+                <br>
+                <li><b>Position: </b>
+                    <ul>
+                        <li>fixed: cố định phần đấy để khi lăn chuột phần đấy không di chuyển</li>
+                        <li>relative: dịch chuyển so với vị trí ban đầu x px có thể trên dưới trái phải</li>
+                        <li>absolute: dịch chuyển so với thẻ relative gần nhất chứa nó, nghĩa là absolute nằm trong
+                            relative</li>
+                        <li>sticky: relative + fixed: ở 1 vị trí trên màn hình và khi di chuyển nó vẫn đứng ở đấy hoặc
+                            khi di chuyển nó sẽ di chuyển đến 1 vị trí rồi không di chuyển nữa
+                            <br>VD: top: 10px thì khi kéo xuống nó sẽ di chuyển đến đoạn cách top 10px thì dừng lại
+                        </li>
+                    </ul>
+                </li>
+                <br>
+                <li><b>Float:</b> dùng cho img
+                    <ul>
+                        <li>
+                            float: left | float:right : ảnh nằm bên trái, phải chữ
+                        </li>
+                        <li>Nếu muốn ảnh nằm giữa 2 dòng thì dòng dưới sẽ có thuộc tính clear: (left/right/both) để nhảy
+                            xuống dưới ảnh</li>
+                    </ul>
+                </li>
+                <br>
+                <li><b>Algin: </b>
+                    <ul>
+                        <li>margin: auto để cho cả block vào giữa <span class="red">với những thẻ không phải block thì
+                                phải thêm thuộc tính display: block</span></li>
+                    </ul>
+                </li>
+            </ol>
+            <br>
+            <li>Flex box</li>
+            <ol type="I">
+                <div>2 thành phần chính: container (phần tử bên ngoài), items (phần bên trong)
+                    <br>để khởi tạo thì tạo div class container và tạo các div class item ở trong
+                </div>
+                <li>Container:
+                    <ul>
+                        <li><b>display: flex: </b>các div item xếp từng hàng sẽ xếp lại trên cùng 1 hàng</li>
+                        <li><b>flex-direction: </b> xác định thứ tự sắp xếp các phần tử (row, row-reverse, column,
+                            column-reverse)</li>
+                        <li><b>flex-wrap: </b> nonwrap, wrap, wrap-reverse</li>
+                        <li><b>justify-content: </b>
+                            <br>flex-start: dồn trái
+                            <br>flex-end: dồn phải
+                            <br>center: ở giữa
+                            <br>space between: cách điều, các phần tử sát dìa
+                            <br>space-around: cách đều, cách cả dìa nhưng cách dìa ít hơn
+                            <br>space-evenly: các đầu cả dìa
+                        </li>
+                        <li><b>aglin-items: </b>giống justify content nhưng theo chiều dọc</li>
+                    </ul>
+                </li>
+                <li>Item:
+                    <ul>
+                        <li><b>order: </b> thứ tự hiển thị các item (gán giá trị order cho các item để hiển thị từ số bé
+                            nhất)</li>
+                        <li><b>flex-grow: 1: </b>chia phần còn thừa của contain có các item có thuộc tính flex-grow để
+                            có thể phủ kín container (nếu giá trị của các item khác nhau thì item có số lớn nhất sẽ đc
+                            chia nhiều nhất)</li>
+                        <li><b>flex-basis: | auto: </b>giống width nhưng ưu tiên dùng</li>
+
+                    </ul>
+                </li>
+            </ol>
+        </ol>
+        <hr>
+        <H1>Những kiến thức JavaScript đã học được</H1>
+        <div style="color: red;">Viết ở cuối để web load trước do code js nặng</div>
+        <ol type="A">
+            <li>Khai báo biến, kiểu dữ liệu, in giá trị:
+                <div>&lt;script&gt;</div>
+                <div class="tab">let a = 10; //khai báo biến a = 10; biến của javascript ko cần xác định kiểu dữ liệu:
+                    nhập String thì nó sẽ là kiểu string</div>
+                <div class="tab">const PI = 3.14; // khai báo hằng</div>
+                <div class="tab">document.write("PI = "+ PI); //in ra màn hình</div>
+                <div class="tab">console.log("a = "+ a); //in ra phần console </div>
+                <div class="tab">console.log(typeof a); //in ra kiểu dữ liệu hiện h của biến đấy </div>
+                <br>
+                <div class="tab">let number = [1,2,3,4,5]; //in ra mảng: (5) [1,2,3,4,5]</div>
+                <div class="tab">number.push(6) // thêm 6 vào cuối</div>
+                <div class="tab">number.pop() //xóa và in ra phần tử cuối mảng</div>
+                <div class="tab">number.shift() //xóa và in ra phần tử đầu mảng</div>
+                <div class="tab">number.unshift(1) // thêm phần tử mới vào đầu</div>
+                <div class="tab">number.lenght //độ dài mảng</div>
+                <div class="tab">khai báo obj</div>
+                <div class="tab">let obj = {</div>
+                <div style="padding-left: 60px;">id:1,</div>
+                <div style="padding-left: 60px;">name:"Huhu"</div>
+                <div style="padding-left: 60px;">"phone number":"11111"</div>
+                <div class="tab">}</div>
+                <div class="tab">console.log(obj["phone number"]) //trả về 11111</div>
+                <div class="tab">alert('huhu') //nhảy thông báo trên trang web</div>
+                <div class="tab">let name = prompt('nhap vao mat khau') //giống alert nhưng có chỗ nhập và sẽ lưu vào
+                    biến</div>
+                <div>&lt;script&gt;</div>
+                <div style="color: black;">Một số kiểu dữ liệu: Number, String, Boolean, Undefine, Null, Objet, Array,
+                    RegExp (biểu
+                    thức chính quy), infinity, </div>
+            </li>
+            <br>
+            <li>Function:
+                <div class="tab">function abc(var1, var2){</div>
+                <div style="padding-left: 80px;">..some code</div>
+                <div class="tab">}</div>
+                <p>function trong đây không cần khai báo giá trị trả về, return bình thường, hàm nào ko return thì
+                    console trả về undifine</p>
+            </li>
+            <li>Vòng lặp sd như java</li>
+            <br>
+            <li>SetTimeout, Setinterval
+                <ul>
+                    <li>SetTimeout: sau 1 tg thì thực hiện 1 gì đấy
+                        <br> VD: 
+                        <div>SetTimeout{function name(params){</div>
+                            <div class="tab">alert('huhu');</div>
+                        <div>},3000}; //sau 3s thông báo huhu</div>
+                    </li>
+                    <br>
+                    <li>setInterval: cứ sau 1 khoảng thời gian thì thực hiện 1 việc gì đấy
+                        <br>cleareInterval để xóa interval và dừng thao tác lại
+                    </li>
+                </ul>
+            </li>
+            <li>JS DOM</li>
         </ol>
     </main>
     <footer>Copyright VNK</footer>
 </body>
+
 </html>

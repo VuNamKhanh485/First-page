@@ -1,0 +1,37 @@
+div{
+    color: gray;
+    
+}
+
+.image{
+    background-image: url('https://statictuoitre.mediacdn.vn/thumb_w/640/2017/7-1512755474943.jpg');
+    width: 640px;
+    height: 422px;
+    float: right;
+}
+
+.plus-list{
+    list-style: none;
+    padding-left: 0%;
+}
+
+.plus-list li::before{
+    content: "+   ";
+    margin: 5px;
+
+}
+
+.header{
+    position: sticky;
+    background-color: gray;
+    top: 20px;
+}
+
+.red{
+    color: red;
+}
+
+.tab{
+    padding-left: 40px;
+    white-space: nowrap;
+}
